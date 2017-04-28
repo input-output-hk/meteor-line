@@ -10,7 +10,7 @@
 
 <template name="hello">
   {{#unless userIsLoggedIn}}
-    <button type="button" class="line-login">LINE LOGIN</button>
+    <button class="line-login" id="line-login-button"> </button>
   {{else}}
     <button type="button" class="logout">LOGOUT</button>
     <p> Your Line User Id: {{ lineUser }}</p>
@@ -35,4 +35,6 @@
     <p> Currently there are no users loaded in the database. Please login with your LINE account to add that user to the database </p>
   {{/if}}
 
+<h2> HOW TO CONFIGURE LINE SERVICE </h2>
+{{>configureLoginServiceDialogForLine}}
 </template>

@@ -20,6 +20,7 @@ Package.onUse(function(api) {
   api.use('accounts-oauth', ['client', 'server']);
   api.use(['underscore', 'service-configuration'], ['client', 'server']);
   api.use(['random', 'templating'], 'client');
+  api.export('Line');
 
   api.addFiles('line-oauth.js', ['client', 'server']);
   api.addFiles('line-server.js', 'server');
