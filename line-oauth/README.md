@@ -20,8 +20,8 @@ ServiceConfiguration.configurations.update(
   { "service": "line" },
   {
     $set: {
-      "clientId": <your_client_id>,
-      "secret": <your_client_secret>,
+      "clientId": <your_channel_id>,
+      "secret": <your_channel_secret>,
     }
   },
   { upsert: true }
