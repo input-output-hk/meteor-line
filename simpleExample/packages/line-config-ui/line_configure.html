@@ -1,0 +1,58 @@
+<template name="configureLoginServiceDialogForLine">
+    <p>
+        First, you'll need to register your app on Line. Follow these steps:
+    </p>
+    <ol>
+        <li>
+            Visit <a href="https://business.line.me/en/services/login" target="_blank">https://business.line.me/en/services/login</a>
+        </li>
+        <li>
+            Click "Start using LINE Login".
+        </li>
+        <li>
+            Click "Choose Enterprise".
+        </li>
+        <li>
+            Click "Add new enterprise", if you have none. Or click the enterprise you want selected.
+        </li>
+        <li>
+            Add an account name and channel description.
+        </li>
+        <li>
+            Check "WEB" as "Application Type".
+        </li>
+        <li>
+            Click "OK".
+        </li>
+        <li>
+            Click "Apply".
+        </li>
+        <li>
+            Click "LINE Developers"
+        </li>
+        <li>
+            Here you will see your information.
+        </li>
+        <li>
+            Copy your Channel ID into the form below
+        </li>
+        <li>
+            Click "SHOW" next to "Channel Secret"
+        </li>
+        <li>
+            Copy the "Channel Secret" into the form below
+        </li>
+        <li>
+            Click on "Technical configuration" in the menu.
+        </li>
+        <li>
+            Click on "Edit".
+        </li>
+        <li>
+            Add this url into the box <span class="url">{{siteUrl}}/_oauth/line</span> and save.
+        </li>
+        <li>
+            Submit this form.
+        </li>
+    </ol>
+</template>

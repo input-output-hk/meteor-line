@@ -1,0 +1,38 @@
+<head>
+  <title>quickAndDirtyLine</title>
+</head>
+
+<body>
+  <h1>LINE!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#unless userIsLoggedIn}}
+    <button type="button" class="line-login">LINE LOGIN</button>
+  {{else}}
+    <button type="button" class="logout">LOGOUT</button>
+    <p> Your Line User Id: {{ lineUser }}</p>
+  {{/unless}}
+  
+  {{#if thereAreUsersInDatabase}}
+
+    <form>
+      UserId: 
+      <select class="message-user input" name="role" required>
+        {{#each userId in getLineUserIds}}
+          <option class="dropdown-option" value={{userId}}>{{userId}}</option>
+        {{/each}}
+      </select> 
+      <br />
+      <br />
+      Message: <input type="text" class="message-text"> <br />
+      <br />
+      <input type="submit" value="Send Message" class="message-button">
+    </form>
+  {{else}}
+    <p> Currently there are no users loaded in the database. Please login with your LINE account to add that user to the database </p>
+  {{/if}}
+
+</template>
