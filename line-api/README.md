@@ -1,4 +1,4 @@
-# line-js-api
+# line-api
 
 ## Overview
 
