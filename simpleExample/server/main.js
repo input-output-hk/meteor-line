@@ -6,8 +6,8 @@ Meteor.startup(() => {
     { "service": "line" },
     {
       $set: {
-        "clientId": "your-client-id",
-        "secret": "your-secret",
+        "clientId": "your-channel-id",
+        "secret": "your-channel-secret",
       }
     },
     { upsert: true }

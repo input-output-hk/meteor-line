@@ -36,7 +36,7 @@ Template.hello.events({
     Meteor.loginWithLine(function (err, res) {
       console.log('login callback', err, res);
       if (err !== 'undefined') {
-        console.log('sucess ' + res, err);
+        console.log('success ' + res, err);
       } else {
         console.log('login failed ' + err);
       }
