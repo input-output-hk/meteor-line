@@ -13,22 +13,15 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.4.3.2');
   api.use('ecmascript');
-  api.use('oauth2', ['client', 'server']);
-  api.use('oauth', ['client', 'server']);
-  api.use('http', ['server']);
   api.use('accounts-base', ['client', 'server']);
   api.use('accounts-oauth', ['client', 'server']);
+  api.use('input-output-hk:line-oauth');
+  api.imply('input-output-hk:line-oauth');
   api.use(['underscore', 'service-configuration'], ['client', 'server']);
   api.use(['random', 'templating'], 'client');
     
   api.addFiles('line-common.js', ['client', 'server']);
   api.addFiles('line-server.js', 'server');
+  api.addFiles('notice.js', 'server');
   api.addFiles('line-client.js', 'client');
-});
-
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.use('input-output-hk:accounts-line');
-  api.mainModule('line-oauth-tests.js');
 });

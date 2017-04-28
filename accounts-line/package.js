@@ -15,7 +15,8 @@ Package.onUse(function(api) {
   api.use('ecmascript');
   api.use('accounts-base', ['client', 'server']);
   api.use('accounts-oauth', ['client', 'server']);
-  api.use('line-oauth', ['client', 'server']);
+  api.use('input-output-hk:line-oauth');
+  api.imply('input-output-hk:line-oauth');
   api.use(['underscore', 'service-configuration'], ['client', 'server']);
   api.use(['random', 'templating'], 'client');
     
