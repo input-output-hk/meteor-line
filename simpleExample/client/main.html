@@ -11,6 +11,9 @@
 <template name="hello">
   {{#unless userIsLoggedIn}}
     {{> loginButtons}}
+  <br />
+  Alternative:
+    <button class="line-login" id="line-login-button"> </button>
   {{else}}
     <button type="button" class="logout">LOGOUT</button>
     <p> Your Line User Id: {{ lineUser }}</p>
