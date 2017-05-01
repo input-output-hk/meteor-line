@@ -13,6 +13,8 @@ This feature provides integration with the OAuth LINE Login method. Amongst its 
 
 Before we can use the login feature, please make sure you've successfully created a Login Channel in LINE. If you haven't yet created the channel, please address to the [official LINE documentation](https://developers.line.me/line-login/overview#line_login_step), and once you've created the channel come back to this point to start setting up the plugin.
 
+You can either use the `line-config-ui` package with the standard login and setup button or use the following method.
+
 First we must configure the service with our keys, by adding them to this snippet inside ```accounts.js``` file.
 
 ```
