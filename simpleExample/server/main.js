@@ -2,18 +2,21 @@ import { Meteor } from 'meteor/meteor';
 
 Meteor.startup(() => {
   // code to run on server at startup
-  ServiceConfiguration.configurations.update(
-    { "service": "line" },
-    {
-      $set: {
-        "clientId": "your-channel-id",
-        "secret": "your-channel-secret",
-      }
-    },
-    { upsert: true }
-  );
+  // Not needed if configured with the UI
+  if(!Package['input-output-hk:accounts-line']) {
+    ServiceConfiguration.configurations.update(
+      {"service": "line"},
+      {
+        $set: {
+          "clientId": "your-channel-id",
+          "secret": "your-channel-secret",
+        }
+      },
+      {upsert: true}
+    );
+  }
 
-  LineApi.registerService("your-channel-secret", "your-channel-access-token");
+  LineApi.registerService("messages-channel-secret", "messages-channel-access-token");
 });
 
 Meteor.methods({

@@ -76,5 +76,7 @@ We suggest to execute this method server side, since it fetches the data through
 A good flow in which this function should fit is as following:
 
 1- Create a route which will be the redirectUri mentioned earlier.
+
 2- Create a Meteor.method that executes ```Line.getLineUserData``` method.
+
 3- When route defined in step 1 is accessed, trigger the meteor method defined in step 2 through a Meteor.call
